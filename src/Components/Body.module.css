@@ -1,0 +1,101 @@
+.form {
+    display: flex;
+    max-width: 46rem;
+    margin: calc(-3.375rem/2) auto;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.input {
+    display: flex;
+    width: 39.875rem;
+    padding: 1rem;
+    border-radius: 8px;
+    background: var(--gray-500);
+    border: 1px solid (--gray-700);
+    color: var(--gray-300);
+    font-size: 1rem;
+    line-height: .875rem;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.button {
+    display: flex;
+    flex: row;
+    width: 5.626rem;
+    height: 3.25rem;
+    border-radius: 8px;
+    background-color: var(--blueDark);
+    color: var(--gray-100);
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    line-height: 140%;
+    font-size: .875rem;
+    font-weight: 700;
+}
+
+.button img {
+    margin-left: 0.5rem;
+}
+
+.content {
+    background-color: var(--gray-600);
+    min-height: calc(100vh - 12.4rem);
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-top: 6rem;
+    max-width: 46rem;
+}
+
+.todoCreated,
+.todoDone {
+    display: flex;
+    justify-content: space-between;
+    font-size: .875rem;
+    line-height: 1.063rem;
+    font-weight: 700;
+}
+
+.todoCreated {
+    color: var(--blue);
+    min-width: 8.688rem;
+    font-weight: 700;
+    font-size: .875rem;
+    line-height: .938rem;
+}
+
+.todoDone {
+    color: var(--purple);
+    min-width: 6.938rem;
+    font-weight: 700;
+    font-size: .875rem;
+    line-height: .938rem;
+}
+
+.todoCreated p,
+.todoDone p {
+    margin-left: 1rem;
+    background-color: var(--gray-400);
+    padding: .125rem .5rem;
+    border-radius: 8px;
+    color: var(--gray-200);
+    font-size: .75rem;
+}
+
+.list {
+    display: flex;
+    margin: 0 auto;
+    max-width: 46rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--gray-400);
+    border-radius: 8px;
+}
