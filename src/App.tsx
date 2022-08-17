@@ -1,5 +1,5 @@
 import { Header } from './Components/Header'
-import { Form } from "./Components/Form"
+import { Body } from "./Components/Body"
 
 import "./global.css"
 
@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Header />
-      <Form />
+      <Body />
     </>
   )
 }
