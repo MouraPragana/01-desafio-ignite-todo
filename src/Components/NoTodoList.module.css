@@ -1,7 +1,16 @@
 .noTodoContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     max-width: 100%;
     margin: 0 auto;
     color: var(--gray-300);
     line-height: 1.4rem;
     font-size: 1rem;
+}
+
+.noTodoContent img {
+    height: 3.5rem;
+    margin-top: 3rem;
+    margin-bottom: 1.2rem;
 }
