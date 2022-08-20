@@ -2,13 +2,43 @@ import style from "./TodoList.module.css";
 
 import trash from "../Assets/trash.svg";
 import check from "../Assets/check.svg";
+import checkDone from "../Assets/checkDone.svg"
 
-export function TodoList() {
+interface todoListProps {
+    id: number;
+    description: string;
+    isDone: boolean | "none";
+    changeTodoStatus: (description: number) => void;
+    deleteTodo: (description: number) => void;
+}
+
+
+export function TodoList({ id, description, isDone, changeTodoStatus, deleteTodo }: todoListProps) {
+
+    function handleChangeTodoStatus() {
+        changeTodoStatus(id);
+    };
+
+    function handleDeleteTodo() {
+        deleteTodo(id);
+    };
+
     return (
         <div className={style.todoItem}>
-            <img className={style.todoCheckButton} src={check} />
-            <span className={style.todoText}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quia error nisi et hic nihil voluptate alias porro sed nulla? Labore harum sit incidunt voluptate, architecto et libero tempore dolore? Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</span>
-            <img className={style.todoDeleteButton} src={trash} />
+            <img
+                onClick={handleChangeTodoStatus}
+                className={style.todoCheckButton}
+                src={isDone ? checkDone : check}
+            />
+            <span
+                className={isDone ? style.todoTextDone : style.todoText}>
+                {description}
+            </span>
+            <img
+                onClick={handleDeleteTodo}
+                className={style.todoDeleteButton}
+                src={trash}
+            />
         </div>
     )
 }
